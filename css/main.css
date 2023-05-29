@@ -11,7 +11,7 @@ a {
 
 /* Add a little padding to the whole body */
 body {
-    /* padding: 20px; */
+    padding: 20px;
 }
 
 /* Make sure all images and sections are no wider than the body */
@@ -61,4 +61,13 @@ nav ul li a {
 
 nav ul li a:hover {
     transform: scale(1.1);
+}
+
+.container {
+    max-width: 1200px;
+    /* adjust this to the max width you want */
+    margin: 0 auto;
+    /* centers the content horizontally */
+    padding: 0 20px;
+    /* adds some space on the sides for smaller screens */
 }

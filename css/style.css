@@ -224,6 +224,7 @@ button,
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
+appearance: button;
   /* 1 */
   background-color: transparent;
   /* 2 */
@@ -271,6 +272,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 
 [type='search'] {
   -webkit-appearance: textfield;
+appearance: textfield;
   /* 1 */
   outline-offset: -2px;
   /* 2 */
@@ -402,7 +404,7 @@ embed,
 object {
   display: block;
   /* 1 */
-  vertical-align: middle;
+  /* vertical-align: middle; */
   /* 2 */
 }
 
@@ -556,8 +558,12 @@ video {
   }
 }
 
-.z-50 {
-  z-index: 50;
+.visible {
+  visibility: visible;
+}
+
+.sticky {
+  position: sticky;
 }
 
 .mx-auto {
@@ -589,10 +595,6 @@ video {
   display: flex;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .w-1\/2 {
   width: 50%;
 }
@@ -601,8 +603,8 @@ video {
   width: 100%;
 }
 
-.max-w-screen-lg {
-  max-width: 1024px;
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-wrap {
@@ -669,11 +671,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 
 .px-4 {
@@ -770,6 +767,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 /* Reset some browser defaults */
 
 body,
@@ -785,7 +792,7 @@ a {
 /* Add a little padding to the whole body */
 
 body {
-  /* padding: 20px; */
+  padding: 20px;
 }
 
 /* Make sure all images and sections are no wider than the body */
@@ -820,38 +827,40 @@ section {
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: top 0.3s;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  /* Creates the frosted glass effect */
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Subtle border */
 }
 
 .sticky.visible {
   top: 0;
 }
 
-.neu-link {
-  padding: 10px 20px;
-  border-radius: 10px;
-  background: #ededed;
-  box-shadow: -10px -10px 20px #d6d6d6,
-        10px 10px 20px #ffffff;
-  transition: all 0.2s ease-in-out;
+nav ul li a {
+  transition: transform 0.3s;
 }
 
-.neu-link:hover {
-  box-shadow: -2px -2px 2px #d6d6d6,
-        2px 2px 2px #ffffff;
+nav ul li a:hover {
+  transform: scale(1.1);
 }
 
-.neu-button {
-  padding: 10px 20px;
-  border-radius: 10px;
-  background: #7030A0;
-  box-shadow: -5px -5px 10px #69309d,
-        5px 5px 10px #7331a3;
-  transition: all 0.2s ease-in-out;
+.container {
+  max-width: 1200px;
+  /* adjust this to the max width you want */
+  margin: 0 auto;
+  /* centers the content horizontally */
+  padding: 0 0px;
+  /* adds some space on the sides for smaller screens */
 }
 
-.neu-button:hover {
-  box-shadow: -2px -2px 2px #69309d,
-        2px 2px 2px #7331a3;
+.hover\:scale-110:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (min-width: 640px) {
