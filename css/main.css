@@ -9,10 +9,6 @@ a {
     font-family: 'Arial', sans-serif;
 }
 
-/* Add a little padding to the whole body */
-body {
-    padding: 20px;
-}
 
 /* Make sure all images and sections are no wider than the body */
 img,
@@ -28,7 +24,7 @@ section {
 /* Make the main header stand out */
 #hero h1 {
     color: #7030A0;
-    font-size: 36px;
+    font-size: 60px;
     margin-bottom: 20px;
 }
 
@@ -55,12 +51,28 @@ section {
     top: 0;
 }
 
-nav ul li a {
-    transition: transform 0.3s;
+.hero-text {
+    font-size: 10rem;
+    /* adjust as needed */
+    background: linear-gradient(90deg, purple 0%, #7030A0 100%);
+
+    font-weight: 900;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-nav ul li a:hover {
-    transform: scale(1.1);
+button:active,
+a:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(4px);
+    transition: all 0.1s ease;
+}
+
+input:focus,
+textarea:focus {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
 }
 
 .container {
@@ -70,4 +82,50 @@ nav ul li a:hover {
     /* centers the content horizontally */
     padding: 0 20px;
     /* adds some space on the sides for smaller screens */
+}
+
+.glassmorphism {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        
+}
+
+.glassmorphism:hover {
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        transform: scale(1.05);
+        transition: all 0.2s ease;
+    
+}
+
+.rounded-glass-image {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: 0.3s;
+}
+
+.rounded-glass-image:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.application-images,
+.perspective-stretch {
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    /* adjust this value to change the rounding of the corners */
+}
+
+.perspective-stretch:hover {
+    transform: scale(1.1) rotateY(20deg);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }

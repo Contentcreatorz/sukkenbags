@@ -1,3 +1,5 @@
+AOS.init();
+
 let lastScrollTop = 0; // We'll use this to store the last scroll position
 
 window.addEventListener('scroll', function() {
@@ -13,3 +15,5 @@ window.addEventListener('scroll', function() {
   lastScrollTop = scrollTop;
   header.classList.toggle('sticky', window.scrollY > 0);
 });
+
+window.addEventListener('resize', AOS.refresh);

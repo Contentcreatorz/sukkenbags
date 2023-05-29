@@ -224,7 +224,6 @@ button,
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
-appearance: button;
   /* 1 */
   background-color: transparent;
   /* 2 */
@@ -272,7 +271,6 @@ Correct the cursor style of increment and decrement buttons in Safari.
 
 [type='search'] {
   -webkit-appearance: textfield;
-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
   /* 2 */
@@ -404,7 +402,7 @@ embed,
 object {
   display: block;
   /* 1 */
-  /* vertical-align: middle; */
+  vertical-align: middle;
   /* 2 */
 }
 
@@ -571,6 +569,11 @@ video {
   margin-right: auto;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -650,6 +653,11 @@ video {
   border-color: rgb(126 34 206 / var(--tw-border-opacity));
 }
 
+.border-purple-900 {
+  --tw-border-opacity: 1;
+  border-color: rgb(88 28 135 / var(--tw-border-opacity));
+}
+
 .bg-purple-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(233 213 255 / var(--tw-bg-opacity));
@@ -716,8 +724,16 @@ video {
   padding-left: 1rem;
 }
 
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
 .pr-2 {
   padding-right: 0.5rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
 }
 
 .text-center {
@@ -732,11 +748,6 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-xl {
@@ -787,12 +798,6 @@ a {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-}
-
-/* Add a little padding to the whole body */
-
-body {
-  padding: 20px;
 }
 
 /* Make sure all images and sections are no wider than the body */
@@ -846,6 +851,30 @@ nav ul li a {
 
 nav ul li a:hover {
   transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.hero-text {
+  font-size: 10rem;
+  /* adjust as needed */
+  background: linear-gradient(90deg, purple 0%, #7030A0 100%);
+  font-weight: 900;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button:active,
+a:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(4px);
+  transition: all 0.1s ease;
+}
+
+input:focus,
+textarea:focus {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
 
 .container {
@@ -853,8 +882,19 @@ nav ul li a:hover {
   /* adjust this to the max width you want */
   margin: 0 auto;
   /* centers the content horizontally */
-  padding: 0 0px;
+  padding: 0 20px;
   /* adds some space on the sides for smaller screens */
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 10px;
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 .hover\:scale-110:hover {
@@ -893,10 +933,5 @@ nav ul li a:hover {
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
-  }
-
-  .sm\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
   }
 }
