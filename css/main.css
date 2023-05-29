@@ -1,0 +1,64 @@
+/* Reset some browser defaults */
+body,
+h1,
+h2,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Add a little padding to the whole body */
+body {
+    /* padding: 20px; */
+}
+
+/* Make sure all images and sections are no wider than the body */
+img,
+section {
+    max-width: 100%;
+}
+
+/* Add some space between sections */
+section {
+    margin-bottom: 20px;
+}
+
+/* Make the main header stand out */
+#hero h1 {
+    color: #7030A0;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.sticky {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s;
+    backdrop-filter: blur(10px);
+    /* Creates the frosted glass effect */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Semi-transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle border */
+}
+
+.sticky.visible {
+    top: 0;
+}
+
+nav ul li a {
+    transition: transform 0.3s;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+}
