@@ -653,11 +653,6 @@ video {
   border-color: rgb(126 34 206 / var(--tw-border-opacity));
 }
 
-.border-purple-900 {
-  --tw-border-opacity: 1;
-  border-color: rgb(88 28 135 / var(--tw-border-opacity));
-}
-
 .bg-purple-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(233 213 255 / var(--tw-bg-opacity));
@@ -817,7 +812,7 @@ section {
 
 #hero h1 {
   color: #7030A0;
-  font-size: 36px;
+  font-size: 50px;
   margin-bottom: 20px;
 }
 
@@ -845,17 +840,8 @@ section {
   top: 0;
 }
 
-nav ul li a {
-  transition: transform 0.3s;
-}
-
-nav ul li a:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
-
 .hero-text {
-  font-size: 10rem;
+  font-size: 8rem;
   /* adjust as needed */
   background: linear-gradient(90deg, purple 0%, #7030A0 100%);
   font-weight: 900;
@@ -887,14 +873,48 @@ textarea:focus {
 }
 
 .glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glassmorphism:hover {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+.rounded-glass-image {
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  border-radius: 10px;
-  /* border: 1px solid rgba(255, 255, 255, 0.2); */
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  transition: 0.3s;
+}
+
+.rounded-glass-image:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.application-images,
+.perspective-stretch {
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+  /* adjust this value to change the rounding of the corners */
+}
+
+.perspective-stretch:hover {
+  transform: scale(1.1) rotateY(20deg);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hover\:scale-110:hover {
