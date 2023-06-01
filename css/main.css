@@ -24,7 +24,7 @@ section {
 /* Make the main header stand out */
 #hero h1 {
     color: #7030A0;
-    font-size: 60px;
+    font-size: 50px;
     margin-bottom: 20px;
 }
 
@@ -52,7 +52,7 @@ section {
 }
 
 .hero-text {
-    font-size: 10rem;
+    font-size: 8rem;
     /* adjust as needed */
     background: linear-gradient(90deg, purple 0%, #7030A0 100%);
 
@@ -85,22 +85,22 @@ textarea:focus {
 }
 
 .glassmorphism {
-            background: rgba(255, 255, 255, 0.25);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
 }
 
 .glassmorphism:hover {
-        background: rgba(255, 255, 255, 0.35);
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
-        transform: scale(1.05);
-        transition: all 0.2s ease;
-    
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+
 }
 
 .rounded-glass-image {
