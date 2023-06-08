@@ -11,7 +11,7 @@ module.exports = {
                 "dark-purple": "#7030A0",
                 "accent-yellow": "#F0E68C",
                 "neutral-white": "#FFFFFF",
-                "neutral-dark": "#4F6EA6"
+                "neutral-dark": "#210436"
       },
     },
   },
