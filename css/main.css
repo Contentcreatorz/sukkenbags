@@ -1,4 +1,3 @@
-/* Reset some browser defaults */
 body,
 h1,
 h2,
@@ -9,22 +8,40 @@ a {
     font-family: 'Arial', sans-serif;
 }
 
+@media (min-width: 1024px) {
+    #mobile-menu {
+        display: none;
+    }
 
-/* Make sure all images and sections are no wider than the body */
+    #main-nav {
+        display: block;
+    }
+}
+
+@media (max-width: 1024px) {
+    #main-nav {
+        display: none;
+    }
+
+    #mobile-menu {
+        display: block;
+    }
+}
+
 img,
 section {
     max-width: 100%;
 }
 
-/* Add some space between sections */
+
 section {
     margin-bottom: 20px;
 }
 
-/* Make the main header stand out */
+
 #hero h1 {
     color: #7030A0;
-    font-size: 50px;
+    font-size: 75px;
     margin-bottom: 20px;
 }
 
@@ -34,26 +51,45 @@ section {
 
 .sticky {
     position: fixed;
-    top: -100%;
+    transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: top 0.3s;
     backdrop-filter: blur(10px);
-    /* Creates the frosted glass effect */
     background-color: rgba(255, 255, 255, 0.5);
-    /* Semi-transparent white */
     border: 1px solid rgba(255, 255, 255, 0.1);
-    /* Subtle border */
 }
 
-.sticky.visible {
-    top: 0;
+.hamburger {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+    }
 }
 
 .hero-text {
     font-size: 8rem;
-    /* adjust as needed */
     background: linear-gradient(90deg, purple 0%, #7030A0 100%);
 
     font-weight: 900;
@@ -77,14 +113,11 @@ textarea:focus {
 
 .container {
     max-width: 1200px;
-    /* adjust this to the max width you want */
     margin: 0 auto;
-    /* centers the content horizontally */
     padding: 0 20px;
-    /* adds some space on the sides for smaller screens */
 }
 
-.glassmorphism {
+.frosty {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
@@ -94,7 +127,7 @@ textarea:focus {
 
 }
 
-.glassmorphism:hover {
+.frosty:hover {
     background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -114,7 +147,7 @@ textarea:focus {
 }
 
 .rounded-glass-image:hover {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 0 0 3px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 3px 15px 0 rgba(31, 38, 135, 0.37);
 }
 
 .application-images,
@@ -122,7 +155,7 @@ textarea:focus {
     transition: 0.5s;
     transform-style: preserve-3d;
     border-radius: 20px;
-    /* adjust this value to change the rounding of the corners */
+    
 }
 
 .perspective-stretch:hover {

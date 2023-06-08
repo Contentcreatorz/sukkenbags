@@ -11,19 +11,18 @@
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-
-
-
 </head>
 <body>
-    <header  id="header" class="sticky visible">
-        <div class="container flex justify-between items-center py-4">
-            <div>
-                <a href="index.html">
-                    <img src="./assets/images/logo.png" alt="Logo" />
-                </a>
-            </div>
-            <nav>
+    <header id="header" class="sticky visible">
+    <div class="container flex justify-between items-center py-4">
+        <div>
+            <a href="index.html">
+                <img src="./assets/images/logo.png" alt="Logo" />
+            </a>
+        </div>
+
+        <nav id="main-nav" class="block lg:flex hidden">
+            <ul class="flex items-center space-x-4 text-purple-700">
 						<ul class="flex items-center space-x-4 text-purple-700">
 							<li>
 								<a href="#about" class="transform transition-transform duration-300 hover:scale-110"
@@ -47,14 +46,57 @@
 							<li>
 								<a
 									href="#cta"
-									class="glassmorphism px-4 py-2 text-purple-700 rounded transform transition-transform duration-300 hover:scale-110"
+									class="frosty px-4 py-2 text-purple-700 rounded transform transition-transform duration-300 hover:scale-110"
 									>Adopt SUKENBAGS™</a
 								>
 							</li>
 						</ul>
-            </nav>
+
+            </ul>
+        </nav>
+
+        <div id="mobile-menu" class="lg:hidden block">
+            <button id="mobile-menu-button">
+                <img src="./assets/images/hamburger.svg" alt="Menu" />
+            </button>
         </div>
-    </header>
+
+        <nav id="mobile-nav" class="hidden">
+            <ul class="flex items-center space-x-4 text-purple-700">
+						<ul class="flex items-center space-x-4 text-purple-700">
+							<li>
+								<a href="#about" class="transform transition-transform duration-300 hover:scale-110"
+									>About</a
+								>
+							</li>
+							<li>
+								<a
+									href="#applications"
+									class="transform transition-transform duration-300 hover:scale-110"
+									>Applications</a
+								>
+							</li>
+							<li>
+								<a
+									href="#testimonials"
+									class="transform transition-transform duration-300 hover:scale-110"
+									>Testimonials</a
+								>
+							</li>
+							<li>
+								<a
+									href="#cta"
+									class="frosty px-4 py-2 text-purple-700 rounded transform transition-transform duration-300 hover:scale-110"
+									>Adopt SUKENBAGS™</a
+								>
+							</li>
+						</ul>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+
 
     <main>
         <section id="hero" class="bg-purple-200 py-20">
@@ -63,7 +105,7 @@
             <p class="text-xl sm:text-2xl text-purple-700 mb-8">
                 Revolutionizing Packaging with Biodegradable and Non-Woven Fabric
             </p>
-            <a href="#cta" class="glassmorphism px-6 py-3 bg-purple-700 text-purple-700 ">Adopt SUKENBAGS™</a>
+            <a href="#cta" class="frosty px-6 py-3 bg-purple-700 text-purple-700 ">Adopt SUKENBAGS™</a>
     </div>
 </section>
 
@@ -175,7 +217,7 @@
                     Be part of the movement. Choose your preferred style and size and let's revolutionize
                     packaging for a sustainable tomorrow.
                 </p>
-                <a href="#contact" class="glassmorphism px-6 py-3 bg-white text-white rounded">Adopt SUKENBAGS™</a>
+                <a href="#contact" class="frosty px-6 py-3 bg-white text-white rounded">Adopt SUKENBAGS™</a>
             </div>
         </section>
 
@@ -229,7 +271,7 @@
             </div>
         </footer>
 
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
     
 </body>
 

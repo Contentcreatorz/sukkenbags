@@ -1,15 +1,15 @@
 AOS.init();
 
-let lastScrollTop = 0; // We'll use this to store the last scroll position
+let lastScrollTop = 0;
 
 window.addEventListener('scroll', function() {
   const header = document.getElementById('header');
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollTop > lastScrollTop) { // If we're scrolling down
-    header.classList.remove('visible');
-  } else { // If we're scrolling up
-    header.classList.add('visible');
+  if (scrollTop > lastScrollTop) {
+    header.style.transform = 'translateY(-100%)';
+  } else {
+    header.style.transform = 'translateY(0)';
   }
   
   lastScrollTop = scrollTop;
@@ -19,3 +19,14 @@ window.addEventListener('scroll', function() {
 window.addEventListener('resize', AOS.refresh);
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("mobile-menu-button").addEventListener("click", function () {
+        var mobileNav = document.getElementById("mobile-nav");
+
+        if (mobileNav.classList.contains("hidden")) {
+            mobileNav.classList.remove("hidden");
+        } else {
+            mobileNav.classList.add("hidden");
+        }
+    });
+});
