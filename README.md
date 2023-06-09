@@ -1,54 +1,67 @@
 # Renew-A-Bag
 
-## Description
+**A web project by Charles Oduk II**
 
-Renew-A-Bag is a website for a revolutionary eco-friendly packaging solution, made from corn starch, PLA, and PBAT which significantly reduces CO2 emissions compared to traditional plastics. This project is designed for SUKEN INTERNATIONAL LIMITED to showcase their innovative packaging product and its versatile applications in various industries.
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Technologies](#technologies)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Setup](#setup)
+- [Support](#support)
+- [Legal Information](#legal)
+- [Author](#author)
+
+## Introduction
+
+Renew-A-Bag is a web project developed by Charles Oduk II for Suken International Limited, with the goal of revolutionizing packaging with biodegradable and non-woven fabric. The project is focused on providing an innovative solution to the global plastic pollution crisis by offering eco-friendly packaging alternatives.
+
+**Renew-A-Bag is NOT an open-source project and all rights are reserved by the author.**
+
+## Technologies
+
+The project was developed using the following technologies:
+
+- HTML5
+- CSS3 (Tailwind CSS)
+- JavaScript
 
 ## Features
 
-- Responsive design for both mobile and desktop
-- A visually appealing layout with a clean and modern interface
-- Sticky header navigation with smooth scrolling for easy navigation
-- Versatile applications section showing the uses of Renew-A-Bag
-- Testimonials to showcase the proven safety and success of Renew-A-Bag
-- Contact Form for inquiries and comments
-- Social media icons for effective communication
+Some notable features of this web project include:
 
-## Tech Stack
+- Responsive design: The website adapts beautifully to various screen sizes and devices.
+- Animated on-scroll content: Content appears with smooth animations as users scroll through the page, providing an engaging user experience.
+- Sticky navigation: The top navigation bar remains visible as users scroll down the page, making it easy to navigate between different sections.
+- Working contact form: The built-in contact form allows users to get in touch with Suken International Limited directly from the website.
 
-- HTML5
-- CSS (Tailwind CSS)
-- JavaScript
-- AOS (Animate on Scroll) Library
+## Screenshots
 
-## Getting Started
+![Hero Section](./Preview/screenshot1.png)
+![About Section](./Preview/screenshot2.png)
+![Testimonials Section](./Preview/screenshot3.png)
+![Applications Section](./Preview/screenshot4.png)
+![Contact Section](./Preview/screenshot5.png)
 
-1. Clone the repository.
+## Setup
 
-```
-git clone https://github.com/Contentcreatorz/sukkenbags.git
-```
+To run this project locally, follow these steps:
 
-2. Navigate to the project directory.
+1. Clone the repository or download the ZIP file.
+2. Open the `index.html` file in your preferred web browser.
+3. Explore and enjoy the website.
 
-```
-cd renew-a-bag
-```
+## Support
 
-3. Open `index.html` in your preferred browser.
+If you have any questions or concerns about the project or need further assistance, please feel free to get in touch with Suken International Limited or the author, Charles Oduk II.
 
-## Contributing
+## Legal
 
-This project is not open for contributions, as the owner, Charles Oduk II, wishes to reserve all rights.
+© 2023 Charles Oduk II for Suken International Limited. All rights reserved.
 
-## License
+The source code and assets of this project are protected by copyright and are not available for public use. Redistribution, modification, or commercial use of any part of this project is strictly prohibited without prior written permission from Charles Oduk II.
 
-All rights reserved to Charles Oduk II and SUKEN INTERNATIONAL LIMITED. Any unauthorized usage, reproduction, or distribution of this project is strictly prohibited.
+## Author
 
-## Contact
-
-For any inquiries or comments, please reach out to SUKEN INTERNATIONAL LIMITED at [info@sukenint.com](mailto:info@sukenint.com).
-
-You can also find their social media profiles on:
-
-- [Facebook](https://www.facebook.com/pages/suken-international-ltd/211917785492316)
+This project was developed by **Charles Oduk II**. For any inquiries, please contact the author directly or reach out to Suken International Limited.
