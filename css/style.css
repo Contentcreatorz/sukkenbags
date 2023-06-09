@@ -787,6 +787,10 @@ video {
   padding-bottom: 1rem;
 }
 
+.pb-6{
+  padding-bottom: 1.5rem;
+}
+
 .pl-2{
   padding-left: 0.5rem;
 }
@@ -1131,6 +1135,10 @@ a:active {
   .sm\:px-20{
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .sm\:pb-20{
+    padding-bottom: 5rem;
   }
 
   .sm\:text-2xl{
