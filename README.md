@@ -38,11 +38,11 @@ Some notable features of this web project include:
 
 ## Screenshots
 
-![Hero Section](./Preview/screenshot1.png)
-![About Section](./Preview/screenshot2.png)
-![Testimonials Section](./Preview/screenshot3.png)
-![Applications Section](./Preview/screenshot4.png)
-![Contact Section](./Preview/screenshot5.png)
+![Hero Section](./preview/screenshot1.png)
+![About Section](./preview/screenshot2.png)
+![Testimonials Section](./preview/screenshot3.png)
+![Applications Section](./preview/screenshot4.png)
+![Contact Section](./preview/screenshot5.png)
 
 ## Setup
 
