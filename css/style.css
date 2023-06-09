@@ -578,9 +578,18 @@ video {
   z-index: 50;
 }
 
+.m-8{
+  margin: 2rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-2{
@@ -1099,6 +1108,10 @@ a:active {
     --tw-space-x-reverse: 0;
     margin-right: calc(2.5rem * var(--tw-space-x-reverse));
     margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .sm\:p-20{
+    padding: 5rem;
   }
 
   .sm\:px-20{
