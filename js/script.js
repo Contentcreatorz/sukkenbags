@@ -13,7 +13,7 @@ window.addEventListener('scroll', function() {
     header.style.transform = 'translateY(0)';
   }
 
-  if (window.scrollY <= 50) {
+  if (window.scrollY <= 5) {
     header.classList.add('transparent');
   } else {
     header.classList.remove('transparent');

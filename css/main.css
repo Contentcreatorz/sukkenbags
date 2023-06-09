@@ -133,7 +133,7 @@ h1.hero-text {
 input:focus,
 textarea:focus {
     transform: scale(1.02);
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
     transition: all 0.3s ease;
     background-color: #ffffff;
     outline: 10px solid var(--background-colour);
@@ -147,7 +147,6 @@ a:active {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    /* padding: 0 20px; */
 }
 
 .frosty {
