@@ -71,8 +71,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.addEventListener('DOMContentLoaded', event => {
 	fetch('../data/testimonials.json')
-		.then(response => response.json())
-		.then(({ testimonials }) => {
+		.then(response => {
+            if (!response.ok) { 
+                throw new Error('Network response was not ok, cannot load testimonials'); 
+            }
+            return response.json();
+        })
+		.then(({testimonials}) => {
 			const testimonialsContainer = document.querySelector('#testimonials .flex')
 			testimonialsContainer.innerHTML = ''
 			testimonials.forEach(testimonial => {
@@ -86,4 +91,7 @@ window.addEventListener('DOMContentLoaded', event => {
                 `
 			})
 		})
+        .catch((error) => {
+            console.error('Error:', error);
+        });
 })
