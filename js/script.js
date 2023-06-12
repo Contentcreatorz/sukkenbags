@@ -69,3 +69,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    fetch('../data/testimonials.json')
+        .then(response => response.json())
+        .then(data => {
+            const testimonialsContainer = document.querySelector('#testimonials .flex');
+
+            testimonialsContainer.innerHTML = '';
+
+          data.testimonials.forEach(testimonial => {
+                testimonialsContainer.innerHTML += `
+                    <div data-aos="zoom-in-up" class="w-full sm:w-1/2 p-4">
+                        <blockquote class="border-l-4 border-purple-700 pl-4 italic mb-4">
+                            <p>"${testimonial.quote}"</p>
+                        </blockquote>
+                        <cite class="font-bold text-dark-purple">- ${testimonial.author}</cite>
+                    </div>
+                `;
+            });
+        });
+});

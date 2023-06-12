@@ -1,287 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+		/>
+		<title>Renew-A-Bag</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/tailwind.css" />
 
-<head>
-    <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>Renew-A-Bag</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/tailwind.css" />
+		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	</head>
+	<body>
+		<header id="header" class="sticky visible text-l font-semibold px-8">
+			<div class="container flex justify-between items-center py-4">
+				<a href="index.html">
+					<img class="logo" src="./assets/images/logo.png" alt="Logo" />
+				</a>
 
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+				<nav id="main-nav" class="block lg:flex hidden">
+					<ul class="flex items-center space-x-4 text-dark-purple">
+						<li>
+							<a href="#about" class="transform transition-transform duration-300 hover:scale-110"
+								>About</a
+							>
+						</li>
+						<li>
+							<a
+								href="#testimonials"
+								class="transform transition-transform duration-300 hover:scale-110"
+								>Testimonials</a
+							>
+						</li>
+						<li>
+							<a
+								href="#applications"
+								class="transform transition-transform duration-300 hover:scale-110"
+								>Applications</a
+							>
+						</li>
+						<li>
+							<a href="#cta" class="frosty font-semibold px-6 py-3 bg-brand-purple text-dark-purple"
+								>Renew-A-Bag</a
+							>
+						</li>
+					</ul>
+				</nav>
 
-</head>
-<body>
-        
+				<div id="mobile-menu" class="lg:hidden block">
+					<button id="mobile-menu-button">
+						<img src="./assets/images/hamburger.svg" alt="Menu" />
+					</button>
+				</div>
+			</div>
+		</header>
+		<aside id="mySidebar" class="glass-sidebar w-50 d-none position-fixed vh-100"></aside>
+		<nav
+			id="mobile-nav"
+			class="glassy z-50 top-0 right-0 w-64 h-full text-dark-purple font-semibold p-6 flex flex-col space-y-10 items-start"
+		>
+			<button id="close-mobile-nav" class="my-5">
+				<img src="./assets/images/close.svg" alt="Close" />
+			</button>
+			<ul class="nav-links flex flex-col space-y-4 h-full mx-auto">
+				<li>
+					<a href="#about" class="transform transition-transform duration-300 hover:scale-110"
+						>About</a
+					>
+				</li>
+				<li>
+					<a
+						href="#applications"
+						class="transform transition-transform duration-300 hover:scale-110"
+						>Applications</a
+					>
+				</li>
+				<li>
+					<a
+						href="#testimonials"
+						class="transform transition-transform duration-300 hover:scale-110"
+						>Testimonials</a
+					>
+				</li>
+				<li>
+					<a href="#cta" class="transform transition-transform duration-300 hover:scale-110"
+						>Renew-A-Bag</a
+					>
+				</li>
+			</ul>
+		</nav>
 
-    <header id="header" class="sticky visible text-l font-semibold px-8">
-    <div class="container flex justify-between items-center py-4">
-        <div>
-            <a href="index.html">
-                <img src="./assets/images/logo.png" alt="Logo" />
-            </a>
-        </div>
+		<main class="text-neutral-dark font-light">
+			<section id="hero" class="py-20">
+				<div data-aos="fade-up" class="container mx-auto px-6 sm:px-20 text-center">
+					<h1 class="hero-text">Introducing Renew-A-Bag</h1>
+					<p class="text-xl font-medium sm:text-2xl mb-8">
+						Revolutionizing Packaging with Biodegradable and Non-Woven Fabric
+					</p>
+					<a href="#cta" class="frosty font-semibold px-6 py-3 bg-brand-purple text-dark-purple"
+						>Renew-A-Bag</a
+					>
+				</div>
+			</section>
 
-        <nav id="main-nav" class="block lg:flex hidden">
-            <ul class="flex items-center space-x-4 text-dark-purple">
-						<ul class="flex items-center space-x-4 text-dark-purple">
-							<li>
-								<a href="#about" class="transform transition-transform duration-300 hover:scale-110"
-									>About</a
-								>
-							</li>
-							<li>
-                                <a
-                                href="#testimonials"
-                                class="transform transition-transform duration-300 hover:scale-110"
-                                >Testimonials</a
-								>
-							</li>
-                            <li>
-                                <a
-                                    href="#applications"
-                                    class="transform transition-transform duration-300 hover:scale-110"
-                                    >Applications</a
-                                >
-                            </li>
-							<li>
-								<a
-									href="#cta"
-									class="frosty font-semibold px-6 py-3 bg-brand-purple text-dark-purple "
-									>Renew-A-Bag</a
-								>
-							</li>
-						</ul>
+			<section id="about" class="py-20 bg-light-purple">
+				<div class="container mx-auto px-6 sm:px-20 flex flex-wrap items-center">
+					<div class="pr-5 w-full sm:w-1/2">
+						<h2
+							data-aos="fade-up"
+							class="text-3xl sm:text-4xl text-dark-purple font-bold dark-purple mb-4"
+						>
+							About Renew-A-Bag
+						</h2>
+						<p data-aos="zoom-out-up" class="text-l sm:text-xl mb-4">
+							Our innovative solution to the global plastic pollution crisis.
+						</p>
+						<p data-aos="zoom-out-up" class="text-l sm:text-xl mb-4">
+							Made from corn starch, PLA, and PBAT, Renew-A-Bag offers a remarkable 60% reduction in
+							CO2 emissions compared to traditional plastics.
+						</p>
+						<p data-aos="zoom-out-up" class="text-l sm:text-xl mb-4">
+							Free of GMO materials, Phthalate, and Bisphenol A (BPA), Renew-A-Bag sets a new
+							standard for eco-friendly packaging.
+						</p>
+					</div>
+					<div data-aos="zoom-out-left" class="pl-5 w-full sm:w-1/2">
+						<img
+							src="assets/images/about.png"
+							alt="Renew-A-Bag infographic"
+							class="rounded-glass-image mx-auto"
+						/>
+					</div>
+				</div>
+			</section>
 
-            </ul>
-        </nav>
+			<section id="testimonials" class="py-20 bg-light-purple">
+				<div class="container mx-auto px-6 sm:px-20 text-center">
+					<h2 data-aos="fade-up" class="text-3xl sm:text-4xl font-bold text-dark-purple mb-4">
+						Proven Success and Safety
+					</h2>
+					<div id="testimonials" class="flex flex-wrap justify-around items-center mt-10">
+						<div data-aos="zoom-out-right" class="w-full sm:w-1/2 p-4">
+							<blockquote class="border-l-4 border-purple-700 pl-4 italic mb-4">
+								<p>
+									"Renew-A-Bag has transformed our packaging process. It's great to know we're
+									reducing our carbon footprint without sacrificing quality."
+								</p>
+							</blockquote>
+							<cite class="font-bold text-dark-purple">- Happy Customer</cite>
+						</div>
+						<div data-aos="zoom-out-left" class="w-full sm:w-1/2 p-4">
+							<blockquote class="border-l-4 border-purple-700 pl-4 italic mb-4">
+								<p>
+									"We're impressed with Renew-A-Bag's eco-friendly approach and commitment to
+									sustainability. They've set a new standard for the industry."
+								</p>
+							</blockquote>
+							<cite class="font-bold text-dark-purple">- Recognized Authority</cite>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        <div id="mobile-menu" class="lg:hidden block">
-            <button id="mobile-menu-button">
-                <img src="./assets/images/hamburger.svg" alt="Menu" />
-            </button>
-        </div>
+			<section id="responsibility" class="py-20">
+				<div
+					class="container mx-auto p-6 sm:p-20 flex sm:flex-row flex-col space-x-0 sm:space-x-10"
+				>
+					<img
+						data-aos="zoom-out-right"
+						src="assets/images/environment.png"
+						alt="Environment Responsibility Image"
+						class="rounded-glass-image w-full sm:w-1/2"
+					/>
+					<div class="m-8">
+						<h2 data-aos="fade-up" class="text-3xl sm:text-4xl font-bold text-dark-purple my-4">
+							Environmental Responsibility
+						</h2>
+						<p data-aos="zoom-out-up" class="text-l sm:text-xl">
+							For a sustainable future and the well-being of future generations, it's crucial to
+							make the shift towards biodegradable bags and packaging. Excessive plastic usage,
+							particularly single-use plastic bags, has inflicted severe damage on our environment.
+							Renew-A-Bag, with its reusable, dissolvable, and biodegradable nature, provides a
+							preferred solution to combat plastic pollution and protect our oceans. It's time to
+							choose responsible alternatives that prioritize our planet's health.
+						</p>
+					</div>
+				</div>
+			</section>
 
-        
-    </div>
-</header>
+			<section id="cta" class="py-20 bg-brand-purple">
+				<div class="container mx-auto px-6 sm:px-20 text-center text-white">
+					<h2 data-aos="fade-up" class="text-3xl sm:text-4xl font-bold mb-4">
+						Embrace a Greener Future with Renew-A-Bag
+					</h2>
+					<p data-aos="zoom-out-up" class="text-l sm:text-xl mb-8">
+						Be part of the movement. Choose your preferred style and size and let's revolutionize
+						packaging for a sustainable tomorrow.
+					</p>
+					<a
+						data-aos="fade-up"
+						href="#contact"
+						class="frosty font-semibold px-6 py-3 bg-white text-white rounded"
+						>Renew-A-Bag</a
+					>
+				</div>
+			</section>
 
-<aside id="mySidebar" class="glass-sidebar w-50 d-none position-fixed vh-100">
-    </aside>
-    <nav id="mobile-nav" class="glassy z-50 top-0 right-0 w-64 h-full text-dark-purple  font-semibold p-6 flex flex-col space-y-10 items-start">
-    <button id="close-mobile-nav" class="my-5">
-    <img src="./assets/images/close.svg" alt="Close" />
-    </button>
-    <ul class="nav-links flex flex-col space-y-4 h-full mx-auto">
-    <li>
-        <a href="#about" class="transform transition-transform duration-300 hover:scale-110">About</a>
-    </li>
-    <li>
-        <a href="#applications" class="transform transition-transform duration-300 hover:scale-110">Applications</a>
-    </li>
-    <li>
-        <a href="#testimonials" class="transform transition-transform duration-300 hover:scale-110">Testimonials</a>
-    </li>
-    <li>
-        <a href="#cta" class="transform transition-transform duration-300 hover:scale-110">Renew-A-Bag</a>
-    </li>
-    <li>
-    </li>
-    </ul>
-    </nav>
-    
-    <main class="text-neutral-dark font-light">
-        <section id="hero" class="py-20">
-        <div data-aos="fade-up" class="container mx-auto px-6 sm:px-20 text-center">
-            <h1 class="hero-text">Introducing Renew-A-Bag</h1>
-            <p class="text-xl font-medium sm:text-2xl mb-8">
-                Revolutionizing Packaging with Biodegradable and Non-Woven Fabric
-            </p>
-            <a href="#cta" class="frosty font-semibold px-6 py-3 bg-brand-purple text-dark-purple ">Renew-A-Bag</a>
-    </div>
-</section>
+			<section id="applications" class="py-20 bg-purple-200">
+				<div class="container mx-auto px-6 sm:px-20">
+					<h2
+						data-aos="fade-up"
+						class="text-3xl sm:text-4xl font-bold text-center text-dark-purple mb-4"
+					>
+						Versatile Applications
+					</h2>
+					<div class="flex flex-wrap justify-around items-center mt-10">
+						<div data-aos="zoom-out-right" class="w-full sm:w-1/3 p-4">
+							<img
+								src="assets/images/application1.png"
+								alt="Application 1"
+								class="application-images mb-4 mx-auto"
+							/>
+							<h3 class="font-bold text-dark-purple mb-2">Packaging</h3>
+							<p>Our offerings include packaging requirements of any form.</p>
+						</div>
+						<div data-aos="zoom-out-up" class="w-full sm:w-1/3 p-4">
+							<img
+								src="assets/images/application2.png"
+								alt="Application 2"
+								class="application-images mb-4 mx-auto"
+							/>
+							<h3 class="font-bold text-dark-purple mb-2">Non-Woven Fabrics</h3>
+							<p>
+								Renew-A-Bag is now utilized in making non-woven fabrics and secondary food
+								packaging.
+							</p>
+						</div>
+						<div data-aos="zoom-out-left" class="w-full sm:w-1/3 p-4">
+							<img
+								src="assets/images/application3.png"
+								alt="Application 3"
+								class="application-images mb-4 mx-auto"
+							/>
+							<h3 class="font-bold text-dark-purple mb-2">Biomedicine</h3>
+							<p>
+								Our products also find application in biomedicine for vascular stents, cartilages,
+								and contact lenses.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        <section id="about" class="py-20 bg-light-purple">
-            <div  class="container mx-auto px-6 sm:px-20 flex flex-wrap items-center">
-                <div data-aos="fade-up" class="pr-5 w-full sm:w-1/2">
-                    <h2 class="text-3xl sm:text-4xl text-dark-purple font-bold dark-purple mb-4">About Renew-A-Bag</h2>
-                    <p class="text-l sm:text-xl mb-4">
-                        Our innovative solution to the global plastic pollution crisis.
-                    </p>
-                    <p class="text-l sm:text-xl mb-4">
-                        Made from corn starch, PLA, and PBAT, Renew-A-Bag offers a remarkable 60% reduction in
-                        CO2 emissions compared to traditional plastics.
-                    </p>
-                    <p class="text-l sm:text-xl mb-4">
-                        Free of GMO materials, Phthalate, and Bisphenol A (BPA), Renew-A-Bag sets a new standard
-                        for eco-friendly packaging.
-                    </p>
-                </div>
-                <div data-aos="fade-left" class="pl-5 w-full sm:w-1/2">
-                    <img  src="assets/images/about.png" alt="Renew-A-Bag infographic" class="rounded-glass-image mx-auto" />
-                </div>
-            </div>
-        </section>
+			<section id="contact" class="py-20">
+				<div class="container mx-auto px-6 sm:px-20 text-center">
+					<h2 data-aos="fade-up" class="text-3xl sm:text-4xl font-bold text-dark-purple mb-4">
+						Get in Touch
+					</h2>
+					<form action="submit_form.php" method="POST" class="w-full sm:w-2/3 mx-auto">
+						<div class="flex flex-wrap mb-6">
+							<div data-aos="zoom-out-right" class="w-full sm:w-1/2 pr-2 mb-4 sm:mb-0">
+								<input
+									type="text"
+									placeholder="Your name"
+									id="name"
+									name="name"
+									class="w-full p-3 border border-purple-700 rounded"
+								/>
+							</div>
+							<div data-aos="zoom-out-left" class="w-full sm:w-1/2 pl-2">
+								<input
+									type="email"
+									placeholder="Your email"
+									id="email"
+									name="email"
+									class="w-full p-3 border border-purple-700 rounded"
+								/>
+							</div>
+						</div>
+						<div data-aos="zoom-out-up" class="mb-6">
+							<textarea
+								placeholder="Your message"
+								id="message"
+								name="message"
+								class="w-full p-3 border border-purple-700 rounded"
+								rows="4"
+							></textarea>
+						</div>
+						<button
+							data-aos="fade-down"
+							type="submit"
+							class="frosty font-semibold px-6 py-3 bg-brand-purple text-dark-purple"
+						>
+							Send Message
+						</button>
+					</form>
+					<div class="flex justify-center mt-10 space-x-4">
+						<a
+							data-aos="fade-right"
+							href="https://www.facebook.com/pages/suken-international-ltd/211917785492316"
+							><img src="assets/images/facebook.svg" alt="Facebook"
+						/></a>
+						<a data-aos="fade-up" href="#"><img src="assets/images/twitter.svg" alt="Twitter" /></a>
+						<a data-aos="fade-left" href="mailto:info@sukenint.com"
+							><img src="assets/images/mail.svg" alt="email"
+						/></a>
+					</div>
+				</div>
+			</section>
+		</main>
 
-        
-<section id="testimonials" class="py-20 bg-light-purple">
-        
-            <div  class="container mx-auto px-6 sm:px-20 text-center">
-                <h2 data-aos="fade-up" class="text-3xl sm:text-4xl font-bold text-dark-purple mb-4">
-                    Proven Success and Safety
-                </h2>
-                <div class="flex flex-wrap justify-around items-center mt-10">
-                    <div data-aos="fade-right" data-aos="fade-up" 
-                    class="w-full sm:w-1/2 p-4">
-                        <blockquote class="border-l-4 border-purple-700 pl-4 italic mb-4">
-                            <p>
-                                "Renew-A-Bag has transformed our packaging process. It's great to know we're reducing
-                                our carbon footprint without sacrificing quality."
-                            </p>
-                        </blockquote>
-                        <cite class="font-bold text-dark-purple">- Happy Customer</cite>
-                    </div>
-                    <div data-aos="fade-left" data-aos="fade-up" 
-                    class="w-full sm:w-1/2 p-4">
-                        <blockquote class="border-l-4 border-purple-700 pl-4 italic mb-4">
-                            <p>
-                                "We're impressed with Renew-A-Bag's eco-friendly approach and commitment to
-                                sustainability. They've set a new standard for the industry."
-                            </p>
-                        </blockquote>
-                        <cite class="font-bold text-dark-purple">- Recognized Authority</cite>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        
-               <section id="responsibility" class="py-20">
-    <div class="container mx-auto p-6 sm:p-20 flex sm:flex-row flex-col space-x-0 sm:space-x-10">
-        <img data-aos="fade-right" src="assets/images/environment.png" alt="Environment Responsibility Image" class="rounded-glass-image w-full sm:w-1/2" />
-        <div data-aos="fade-up m-8" >
-            <h2 class="text-3xl sm:text-4xl font-bold text-dark-purple my-4">
-                Environmental Responsibility
-            </h2>
-            <p class="text-l sm:text-xl ">
-                For a sustainable future and the well-being of future generations, it's crucial to make
-                the shift towards biodegradable bags and packaging. Excessive plastic usage, particularly
-                single-use plastic bags, has inflicted severe damage on our environment. Renew-A-Bag, with
-                its reusable, dissolvable, and biodegradable nature, provides a preferred solution to
-                combat plastic pollution and protect our oceans. It's time to choose responsible
-                alternatives that prioritize our planet's health.
-            </p>
-        </div>
-    </div>
-</section>
+		<footer
+			data-aos="fade-up"
+			data-aos-anchor-placement="top-bottom"
+			class="py-10 bg-brand-purple text-white"
+		>
+			<div class="container mx-auto pb-6 sm:p-10 text-center">
+				<h2 class="text-2xl font-bold mb-4">SUKEN INTERNATIONAL LIMITED</h2>
+				<p class="m-4">
+					Tel : +254721444721. Email : info@sukenint.com Methodist Synod, 1st floor. Muthangari
+					Road, Valley Arcade, Nairobi.
+				</p>
+				<nav
+					class="mb-4 text-white px-4 font-semibold space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:space-x-20 md:grid md:grid-cols-2 lg:flex lg:justify-center"
+				>
+					<a href="#hero" class="block sm:inline lg:block">Home</a>
+					<a href="#about" class="block sm:inline lg:block">About</a>
+					<a href="#applications" class="block sm:inline lg:block">Applications</a>
+					<a href="#testimonials" class="block sm:inline lg:block">Testimonials</a>
+					<a href="#cta" class="block sm:inline lg:block">Join Us</a>
+					<a href="#contact" class="block sm:inline lg:block">Contact</a>
+				</nav>
+				<div class="m-6">
+					<p>Website designed and developed by Charles Oduk II</p>
+					<a href="https://www.charles-oduk-II.com" target="_blank" rel="noopener noreferrer"
+						>Visit my Portfolio</a
+					>
+				</div>
 
-
-            <section id="cta" class="py-20 bg-brand-purple">
-            <div data-aos="fade-up"  class="container mx-auto px-6 sm:px-20 text-center text-white">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">
-                    Embrace a Greener Future with Renew-A-Bag
-                </h2>
-                <p class="text-l sm:text-xl mb-8">
-                    Be part of the movement. Choose your preferred style and size and let's revolutionize
-                    packaging for a sustainable tomorrow.
-                </p>
-                <a href="#contact" class="frosty font-semibold px-6 py-3 bg-white text-white rounded">Renew-A-Bag</a>
-            </div>
-        </section>     
-
-<section 
-     id="applications" class="py-20 bg-purple-200">
-        <div class="container mx-auto px-6 sm:px-20">
-            <h2 data-aos="fade-up" class="sm:text-4xl font-bold text-center text-dark-purple mb-4">
-                Versatile Applications
-            </h2>
-            <div class="flex flex-wrap justify-around items-center mt-10">
-                <div data-aos="fade-right" 
-                class="w-full sm:w-1/3 p-4">
-                    <img src="assets/images/application1.png" alt="Application 1" class="application-images mb-4 mx-auto" />
-                    <h3 class="font-bold text-dark-purple mb-2">Packaging</h3>
-                    <p>Our offerings include packaging requirements of any form.</p>
-                </div>
-                <div data-aos="fade-up" 
-                class="w-full sm:w-1/3 p-4">
-                    <img src="assets/images/application2.png" alt="Application 2" class="application-images mb-4 mx-auto" />
-                    <h3 class="font-bold text-dark-purple mb-2">Non-Woven Fabrics</h3>
-                    <p>
-                        Renew-A-Bag is now utilized in making non-woven fabrics and secondary food packaging.
-                    </p>
-                </div>
-                <div data-aos="fade-left" 
-                class="w-full sm:w-1/3 p-4">
-                    <img src="assets/images/application3.png" alt="Application 3" class="application-images mb-4 mx-auto" />
-                    <h3 class="font-bold text-dark-purple mb-2">Biomedicine</h3>
-                    <p>
-                        Our products also find application in biomedicine for vascular stents, cartilages, and
-                        contact lenses.
-                    </p>
-                </div>
-            </div>
-        </div>
-</section>
-    
-
-       
-
-        <section id="contact" class="py-20 ">
-            <div class="container mx-auto px-6 sm:px-20 text-center">
-                <h2 data-aos="fade-down" class="text-3xl sm:text-4xl font-bold text-dark-purple mb-4">Get in Touch</h2>
-                <form action="submit_form.php" method="POST" class="w-full sm:w-2/3 mx-auto">
-                    <div class="flex flex-wrap mb-6">
-                        <div data-aos="fade-right" class="w-full sm:w-1/2 pr-2 mb-4 sm:mb-0">
-                            <input type="text" placeholder="Your name" id="name" name="name"
-                                class="w-full p-3 border border-purple-700 rounded" />
-                        </div>
-                        <div data-aos="fade-left" class="w-full sm:w-1/2 pl-2">
-                            <input type="email" placeholder="Your email" id="email" name="email"
-                                class="w-full p-3 border border-purple-700 rounded" />
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" class="mb-6">
-                        <textarea placeholder="Your message" id="message" name="message"
-                            class="w-full p-3 border border-purple-700 rounded" rows="4"></textarea>
-                    </div>
-                    <button data-aos="fade-up" type="submit" class="frosty font-semibold px-6 py-3 bg-brand-purple text-dark-purple">
-                        Send Message
-                    </button>
-                </form>
-                <div class="flex justify-center mt-10 space-x-4">
-                    <a data-aos="fade-right" href="https://www.facebook.com/pages/suken-international-ltd/211917785492316"><img src="assets/images/facebook.svg" alt="Facebook" /></a>
-                    <a data-aos="fade-up" href="#"><img src="assets/images/twitter.svg" alt="Twitter" /></a>
-                    <a data-aos="fade-left" href="mailto:info@sukenint.com"><img src="assets/images/mail.svg" alt="email" /></a>
-                </div>
-            </section>  
-            
-        </main>
-        
-       <footer data-aos="fade-up" class="py-10 bg-brand-purple text-white">
-  <div class="container mx-auto pb-6 sm:pb-10 text-center">
-    <h2 class="text-2xl font-bold mb-4">SUKEN INTERNATIONAL LIMITED</h2>
-    <p class="mb-4">
-      We're committed to preserving the environment and empowering you to make a meaningful difference.
-    </p>
-    <nav class="mb-4 text-white px-4 font-semibold space-y-4 sm:space-y-0 sm:flex sm:justify-center sm:space-x-20 md:grid md:grid-cols-2 lg:flex lg:justify-center">
-      <a href="#hero" class="block sm:inline lg:block">Home</a>
-      <a href="#about" class="block sm:inline lg:block">About</a>
-      <a href="#applications" class="block sm:inline lg:block">Applications</a>
-      <a href="#testimonials" class="block sm:inline lg:block">Testimonials</a>
-      <a href="#cta" class="block sm:inline lg:block">Join Us</a>
-      <a href="#contact" class="block sm:inline lg:block">Contact</a>
-    </nav>
-    <p>&copy; 2023 SUKEN INTERNATIONAL LIMITED. All rights reserved.</p>
-  </div>
-</footer>
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.12.0/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <script src="./js/script.js"></script>
-    
-</body>
-
+				<p class="m-4">&copy; 2023 SUKEN INTERNATIONAL LIMITED. All rights reserved.</p>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.12.0/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+		<script src="./js/script.js"></script>
+	</body>
 </html>

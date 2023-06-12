@@ -6,7 +6,7 @@
 
 
 body {
-    background-color: var(--background-colour); 
+    background-color: var(--background-colour);
     overflow-x: hidden;
 }
 
@@ -28,7 +28,9 @@ a {
     transform: translateX(0%);
 }
 
-
+.logo {
+    max-height: 50px;
+}
 
 /* #mySidebar {
     transform: translateX(-100%);
@@ -80,20 +82,22 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
+
 .glassy {
     position: fixed;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .transparent {
     transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     background-color: transparent;
 }
+
 .hamburger {
     display: none;
 }
@@ -136,7 +140,7 @@ nav ul {
     }
 }
 
-#hero { 
+#hero {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -146,6 +150,7 @@ nav ul {
 
 }
 
+/* Default styles for the hero text */
 h1.hero-text {
     font-size: 4.75em;
     font-weight: 900;
@@ -155,6 +160,15 @@ h1.hero-text {
     animation: gradient 5s ease infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    h1.hero-text {
+        font-size: 2.5em;
+        line-height: 1.2;
+        margin-block: 10px;
+    }
 }
 
 input:focus,
